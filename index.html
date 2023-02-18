@@ -25,37 +25,8 @@ Key pressed: <span id="kp"></span>
 Key code: <span id="kc"></span>
 <p id="status">Keyboard Event Status</p>
  
-  <button type="button" href="myMove()">Click Me</button>
 <div id ="container">
   <div id ="animate"></div>
 </div>
-
-<script>
-function myMove() {
-  document.addEventListener('keydown', function(event) {
-    if(event.keyCode == 37) {
-        alert('Left was pressed');
-    }
-    else if(event.keyCode == 39) {
-        alert('Right was pressed');
-    }
-  });
-  let id = null;
-  const elem = document.getElementById("animate");   
-  let pos = 0;
-  clearInterval(id);
-  id = setInterval(frame, 5);
-  function frame() {
-    if (pos == 350) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      elem.style.top = pos + "px"; 
-      elem.style.left = pos + "px"; 
-    }
-  }
-}
-</script>
-
 </body>
 </html>
